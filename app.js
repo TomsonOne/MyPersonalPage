@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+
 
 var app = express();
 
@@ -29,10 +29,13 @@ app.use(express.static(__dirname + '/node_modules/font-awesome/css'));
 app.use(express.static(__dirname + '/node_modules/font-awesome/'));
 app.use(express.static(__dirname + '/node_modules/magnific-popup/dist'));
 app.use(express.static(__dirname + '/node_modules/scrollreveal/dist'));
+app.use(express.static(__dirname + '/node_modules/animate.css'));
+app.use(express.static(__dirname + '/node_modules/lettering/src'));
+app.use(express.static(__dirname + '/node_modules/textillate'));
 
 
 app.use('/', index);
-app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
