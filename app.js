@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 
-
 var app = express();
 
 // view engine setup
@@ -32,6 +31,8 @@ app.use(express.static(__dirname + '/node_modules/scrollreveal/dist'));
 app.use(express.static(__dirname + '/node_modules/animate.css'));
 app.use(express.static(__dirname + '/node_modules/lettering/src'));
 app.use(express.static(__dirname + '/node_modules/textillate'));
+
+
 
 
 app.use('/', index);
